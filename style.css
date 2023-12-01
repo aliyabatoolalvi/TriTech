@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8; 
 }
 :root{
     --nav: #22092C;
@@ -8,7 +9,9 @@ body{
     --button:#F05941 ;
 }
 nav{
-    position: static;
+    position: fixed;
+    width: 100%;
+    
 }
 .navbar {
   
@@ -17,7 +20,7 @@ nav{
     box-shadow: 0 10px 6px -6px #777;
     background-color: var(--nav);
     color: #fff;
-    padding: 0 12px;
+    /* padding: 15px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,11 +79,48 @@ nav{
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    margin: 12px;
 }
 
 .cta-button:hover {
     background-color: #ffcc00; /* Change the background color on hover */
 }
+
+/* ended navvvvvvvvvvvvvvvvvvvvvvvvvv  */
+
+
+/* Welcoming Section styles */
+.welcome-section {
+    /* top: 100px; */
+    text-align: center;
+    padding: 50px;
+    padding-top: 100px;
+}
+.welcome-section img{
+    
+    top: 64px;
+    right: 50px;
+    /* left: 30px; */
+    z-index: -1;
+
+}
+
+.welcome-section h1 {
+    color: var(--nav); 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #555; /* Subdued text color */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+
 
 
 .image-cutout {
@@ -96,10 +136,11 @@ nav{
     object-fit: cover; 
     background-color: var(--overlay);
     opacity: 0.5;
- 
 }
 
 
+
+/* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footer {
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
@@ -114,55 +155,55 @@ nav{
     margin: 5px 0;
 }
 
-.footer h3 {
-    margin-bottom: 10px;
-}
+        .footer h3 {
+            margin-bottom: 10px;
+        }
 
-.footer-left ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .footer-left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.footer-left li {
-    margin-bottom: 10px;
-}
+        .footer-left li {
+            margin-bottom: 10px;
+        }
 
-.footer-left a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease-in-out;
-}
+        .footer-left a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
 
-.footer-left a:hover {
-    color: #ffd700; /* Change the color on hover */
-}
+        .footer-left a:hover {
+            color: #ffd700; /* Change the color on hover */
+        }
 
-.footer-middle, .footer-right {
-    max-width: 300px;
-}
+        .footer-middle, .footer-right {
+            max-width: 300px;
+        }
 
-.footer textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
-}
+        .footer textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
 
-.footer button {
-    background-color: var(--button);
-    color: #333;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
+        .footer button {
+            background-color: var(--button);
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
 
-.footer button:hover {
-    background-color: #ffcc00; /* Change the background color on hover */
-}
-.f img{
-    width: 120px !important;
-    height: 120px;
-}
+        .footer button:hover {
+            background-color: #ffcc00; /* Change the background color on hover */
+        }
+        .f img{
+            width: 120px !important;
+            height: 120px;
+        }
