@@ -7,17 +7,23 @@ body{
     --overlay: #872341;
     --button:#F05941 ;
 }
+nav{
+    position: static;
+}
 .navbar {
+  
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
-         box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
     background-color: var(--nav);
     color: #fff;
     padding: 0 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0;
+    /* margin-bottom: 10px; */
+    
 }
 
 .logo {
@@ -137,7 +143,7 @@ body{
 }
 
 .footer textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -155,4 +161,8 @@ body{
 
 .footer button:hover {
     background-color: #ffcc00; /* Change the background color on hover */
+}
+.f img{
+    width: 120px !important;
+    height: 120px;
 }
