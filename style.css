@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Share+Tech+Mono&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -95,6 +97,9 @@ nav{
     text-align: center;
     padding: 50px;
     padding-top: 100px;
+    height: 100vh;
+    /* background-image: url("images/BACKGROUND/Untitled\ design.png"); */
+    filter: none;
 }
 .welcome-section img{
     
@@ -106,11 +111,26 @@ nav{
 }
 
 .welcome-section h1 {
-    color: var(--nav); 
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    /* color: var(--nav);  */
+    font-size: 9.5rem;
+    margin-bottom: -20px;
+    margin-top: 0;
+    padding-top: 0;
+    font-family: 'Poppins', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--nav);
+    background-image: url(images/BACKGROUND/12.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 15s linear infinite ;
+
 }
 
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
 .welcome-section p {
     color: #555; /* Subdued text color */
     font-size: 1.1rem;
@@ -120,16 +140,12 @@ nav{
     text-wrap: balance;
 }
 
-
-
-
 .image-cutout {
     position: relative;
     width: 300px; /* Adjust as needed */
     height: 300px; /* Adjust as needed */
     overflow: hidden;
 }
-
 .image-cutout img {
     width: 100%;
     height: 100%;
@@ -137,8 +153,6 @@ nav{
     background-color: var(--overlay);
     opacity: 0.5;
 }
-
-
 
 /* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footer {
