@@ -35,10 +35,12 @@ nav{
 }
 
 .logo {
+
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    margin-left: 20px;
 }
 
 .logo img {
@@ -327,10 +329,13 @@ nav{
     justify-content: center; */
     text-align: justify;
     color: var(--nav);
-    background-color: #872341;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     align-content: center;
-    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 20px;
 }
 
 .highlights  h1 {
@@ -341,13 +346,15 @@ nav{
 
 .highlights p{
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    
 }
 blockquote{
     align-self: center;
     width: 50%;
     background-color: var(--nav);
-    color: #f8f8f8;
+    color: #ebb5b5;
     border-radius: 5px;
     padding: inherit;
+    margin: 0;
 }
