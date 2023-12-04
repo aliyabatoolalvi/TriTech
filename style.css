@@ -4,8 +4,11 @@ body{
     margin: 0;
     padding: 0;
     background-color: #f8f8f8; 
-     display: flex;
-     flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+
 }
 :root{
     --nav: #22092C;
@@ -87,6 +90,9 @@ nav{
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     margin: 12px;
+    font-family: 'Poppins', sans-serif;
+
+    
 }
 
 .cta-button:hover {
@@ -105,6 +111,7 @@ nav{
     height: auto;
     /* background-image: url("images/BACKGROUND/Untitled\ design.png"); */
     filter: none;
+    margin-top:55px;
 }
 .welcome-section .chinty{
     top: 41px;
@@ -189,17 +196,27 @@ nav{
     align-items: center; */
     
     display:flex;
+    flex-direction: column ;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    background-color: beige;
+    width: 100%;
+    height: fit-content;
+    color:var(--nav);
+    
+    /* overflow:auto; */
+}
+.alllanguages{
+    display:flex;
     /* flex-direction: column ; */
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: beige;
-    width: 100%;
-    height: 100vh;
-    
-    /* overflow:auto; */
 }
-
+.banner{
+    
+}
 
 .image-cutout {
     display: flex;
@@ -212,22 +229,28 @@ nav{
     /* background-color: #555; */
     justify-content: center;
     justify-items: center;
-    
+    margin-bottom: 50px;
+    cursor: pointer;   
 }
 .image-cutout img {
     width: 200px;
     height: 200px;
     object-fit: cover; 
-  
 }
-.image-cutout h1{
+.image-cutout h1 a{
     /* position: absolute; */
+    margin: 0 0;
+    color:var(--button);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
 
     
 }
 .image-cutout p{
     /* background-color: aquamarine; */
     width: 200px;
+    text-align: justify;
+    margin: 0;
 }
   .second-row {
     flex: 0 0 100%;
@@ -235,13 +258,10 @@ nav{
   .language{
     margin: 0 15px;
   }
-
-
 .presented{
     width: 100%;
     height: 300px;
 }
-  
   /* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footer {
     -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -314,8 +334,6 @@ nav{
             width: 120px !important;
             height: 120px;
         }
-
-
 /* about html styles */
 .highlights{
     align-self: center;
@@ -358,3 +376,26 @@ blockquote{
     padding: inherit;
     margin: 0;
 }
+
+
+/* for hovering effect on languages */
+
+.image-cutout:hover h1 a{ 
+    color: var(--nav);
+}
+/* .image-cutout img{
+        transition: transform 0.5s ease-in-out;
+}
+
+
+.hidden-image {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+.image-container:hover .hidden-image {
+    left: 0;
+    opacity: 1;
+  } */
