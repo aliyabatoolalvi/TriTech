@@ -19,17 +19,19 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">
-            <img src="/images/logo.PNG" alt="TriTech Logo">
-            <!-- <span>TriTech</span> -->
+        <div class="menu-box">
+            <div class="logo">
+                <img src="/images/logo.PNG" alt="TriTech Logo">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="changePage(1)">Home</a></li>
+                <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
+                <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
+                <li><a href="#" onclick="changePage(4)">About Us</a></li>
+            </ul>
+            <button class="cta-button"><a href="login.html">Get Started</a></button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#" onclick="changePage(1)">Home</a></li>
-            <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
-            <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
-            <li><a href="#" onclick="changePage(4)">About Us</a></li>
-        </ul>
-        <button class="cta-button"><a href="login.html">Get Started</a></button>
     </nav>
 
     <!-- ending navvvvvvvvvvv -->
@@ -50,7 +52,6 @@
             <p>Your friendly companion in the world of programming. Whether you're a fresh face in the university corridors or someone looking for a quick programming refresher, then you are in right website</p>
             <p>Our notes are crafted with care to make complex programming concepts feel like a breeze. </p>
             <!-- Dive into the exciting realm of coding, where each line of code is a step towards unleashing your creativity. -->
-           
             <button class="cta-button" onclick="changePage('getting-started')"><a href="login.html">Get Started</a></button>
         </div>
     </main>
@@ -64,7 +65,7 @@
                 <img src="images/1.png" alt="Cutout Image 1">
                 <!-- <img class="hidden-image" src="image2.jpg" alt="Image 2"> -->
                 <div class="language">
-                    <h1><a href="java.html">Java</a></h1>
+                    <h1><a href="/TriTech-main/TriTech-main/java.html">Java</a></h1>
                     <p>Get ready to set on the most exciting voyage 🚢 of learning java with TriTech where complicated concepts that weigh our backs down are made easy-to-understand😎.</p>
                 </div>
             </div>
@@ -84,9 +85,52 @@
             </div>
         </div>
     </div>
-
+    <div class="presentedby">
+        <h1 class="banner" id="language">
+            Our Developers
+        </h1>
     <div class="presented">
 
+        <div class="card">
+            <div class="card-content">
+                <div class="developer-info">
+                    <div class="developer-pic">
+                        <img src="images/icon.png" alt="Developer's Picture"></div>
+                    <div class="text-info">
+                        <div class="developer-name">Aliya Batool Alvi</div>
+                        <div class="developer-role">Python Developer</div>
+                    </div>
+                </div>
+         <p>Currently in 5th semester and excel in web design. Have strong grip on Python Programming.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="developer-info">
+                    <div class="developer-pic">
+                        <img src="/images/icon.png" alt="Developer's Picture"></div>
+                    <div class="text-info">
+                        <div class="developer-name">Taiba Sharif</div>
+                        <div class="developer-role">C++ Developer</div>
+                    </div>
+                </div>
+                <p>Have accomplished coding experience with bootcamp won 1st position with C++</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="developer-info">
+                    <div class="developer-pic">
+                        <img src="/images/icon.png" alt="Developer's Picture"></div>
+                    <div class="text-info">
+                        <div class="developer-name">Hooria Kaleem</div>
+                        <div class="developer-role">Java Developer</div>
+                    </div>
+                </div>
+                <p>Have strong command on Java GUI, deployed 5 applications using this language.</p>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer class="footer">
