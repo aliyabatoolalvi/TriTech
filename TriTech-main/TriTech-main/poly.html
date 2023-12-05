@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <style>
+        body{
+            background-color:rgb(235, 179, 179);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <h2>Polymorphism</h2>
+    <P>
+        Polymorphism is one of the four fundamental pillars of object-oriented programming (OOP) in Java. It refers to
+        the ability of a single method or piece of code to work with different types of objects. There are two types of
+        polymorphism in Java: compile-time polymorphism (method overloading) and runtime polymorphism (method
+        overriding).
+    <h4>Compile-time Polymorphism (Method Overloading):</h4>
+    <p>
+        Method overloading occurs when two or more methods in the same class have the same name but different parameters
+        (number, type, or both).<br>
+        public class Calculator {<br>
+        // Method with two integer parameters<br>
+        public int add(int a, int b) {<br>
+        return a + b;<br>
+        }<br>
+
+        // Method with three integer parameters<br>
+        public int add(int a, int b, int c) {<br>
+        return a + b + c;<br>
+        }<br>
+
+        // Method with two double parameters<br>
+        public double add(double a, double b) {<br>
+        return a + b;<br>
+        }<br>
+        }<br>
+        In this example, the add method is overloaded with different parameter lists. The compiler determines which
+        method to call based on the arguments provided at the call site.
+    <h4>Runtime Polymorphism (Method Overriding):</h4>
+    <p>
+        Method overriding occurs when a subclass provides a specific implementation for a method that is already defined
+        in its superclass. This allows a subclass object to be treated as an object of its superclass, and the correct
+        method is determined at runtime.<br>
+        // Superclass<br>
+        class Animal {<br>
+        public void makeSound() {<br>
+        System.out.println("Some generic sound");<br>
+        }
+        }
+
+        // Subclass<br>
+        class Dog extends Animal {<br>
+        @Override<br>
+        public void makeSound() {<br>
+        System.out.println("Woof! Woof!");
+        }
+        }<br>
+        In this example, the Dog class overrides the makeSound method of the Animal class. When you call makeSound on a
+        Dog object, the overridden method in the Dog class is executed.<br>
+    <h4>Using Polymorphism:</h4>
+    <p>
+        public class Main {<br>
+        public static void main(String[] args) {<br>
+        // Compile-time polymorphism (Method Overloading)<br>
+        Calculator calculator = new Calculator();<br>
+        System.out.println(calculator.add(5, 10)); // Output: 15<br>
+        System.out.println(calculator.add(5, 10, 15)); // Output: 30<br>
+        System.out.println(calculator.add(3.5, 2.5)); // Output: 6.0<br>
+
+        // Runtime polymorphism (Method Overriding)<br>
+        Animal myDog = new Dog();<br>
+        myDog.makeSound(); // Output: Woof! Woof!
+        }
+        }<br>
+        In the example above, the Calculator class demonstrates compile-time polymorphism through method overloading,
+        while the Animal and Dog classes showcase runtime polymorphism through method overriding.<br><br>
+
+        Polymorphism enhances code flexibility, extensibility, and readability, allowing for the creation of more
+        generic and reusable code. It enables the use of a common interface for different classes, promoting a more
+        modular and maintainable code structure.
+
+
+    </p>
+
+    </p>
+
+    </p>
+    </P>
+    <p><a href="java.html">Back to previous </a></p>
+</header>
+<footer class="footer">
+    <div class="footer-left">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#" onclick="changePage(1)">Home</a></li>
+            <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
+            <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
+            <li><a href="#" onclick="changePage(4)">About Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-middle">
+        <h3>Contact Us</h3>
+        <p>Email: info@tritech.com</p>
+        <p>Phone: +92 316-344-234-3</p>
+    </div>
+    <div class="footer-right">
+        <h3>Give Us Your Feedback</h3>
+        <p>We value your opinion. Let us know how we can improve your TriTech experience!</p>
+        <textarea placeholder="Your feedback..."></textarea>
+        <button>Submit</button>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <style> body{
+        background-color:rgb(235, 179, 179);
+
+    }</style>
+</head>
+
+<body>
+    <header>
+    <h2>CLasses and objects</h2>
+    <h3>Classes</h3>
+    <p>A class is a blueprint or a template for creating objects. It defines the structure and behavior of objects. A
+        class encapsulates data (attributes) and methods (functions) that operate on that data. Here's a simple
+        example of a class:<br>
+        // Define a class named "Car"<br>
+        public class Car {<br>
+
+        // Attributes (instance variables)<br>
+        String make;<br>
+        String model;<br>
+        int year;<br>
+
+        // Constructor (a special method used for initializing objects)<br>
+        public Car(String make, String model, int year) {<br>
+        this.make = make;<br>
+        this.model = model;<br>
+        this.year = year;<br>
+        }
+
+        // Method (function)<br>
+        public void displayInfo() {<br>
+        System.out.println("Car: " + year + " " + make + " " + model);<br>
+        }<br>
+        }<br>
+    <h3>Objects</h3>
+    <p>
+        An object is an instance of a class. It is a concrete entity created from the class blueprint. Using the above
+        Car class, you can create objects representing specific cars:<br>
+        public class Main {<br>
+        public static void main(String[] args) {<br>
+        // Create two Car objects<br>
+        Car car1 = new Car("Toyota", "Camry", 2022);<br>
+        Car car2 = new Car("Honda", "Civic", 2021);<br>
+
+        // Accessing object properties and invoking methods<br>
+        car1.displayInfo(); // Output: Car: 2022 Toyota Camry<br>
+        car2.displayInfo(); // Output: Car: 2021 Honda Civic<br>
+        }<br>
+        }<br>
+        In the example above, <b>car1 </b>and <b>car2</b> are instances of the Car class.<br>
+    <h4>Key Concepts</h4>
+    <p><ul>
+       <li><b>Encapsulation:</b> The bundling of data (attributes) and methods that operate on the data within a single unit
+        (class). It helps in data hiding and abstraction.<br></li>
+
+       <li> <b>Constructor:</b> A special method used for initializing objects when they are created. It has the same name as the
+        class and is called automatically when an object is instantiated.<br></li>
+
+        <li><b>Method:</b> Functions defined within a class that perform actions or provide services related to the class.<br></li>
+
+        <li><b>Instance Variables:</b> Variables that belong to an instance of a class (an object). Each object can have its own
+        set of instance variables.<br></li>
+
+       <li> <b>this Keyword:</b> Refers to the current instance of the class. It is used to differentiate instance variables from
+        local variables when they have the same name.<br><br></li></ul>
+
+        Object-oriented programming allows you to model real-world entities, relationships, and behaviors in a more
+        natural and intuitive way, making code more modular, reusable, and easier to maintain.
+    </p>
+
+
+    
+
+    
+    <p><a href="java.html">Back to previous </a></p>
+</header>
+<footer class="footer">
+    <div class="footer-left">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#" onclick="changePage(1)">Home</a></li>
+            <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
+            <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
+            <li><a href="#" onclick="changePage(4)">About Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-middle">
+        <h3>Contact Us</h3>
+        <p>Email: info@tritech.com</p>
+        <p>Phone: +92 316-344-234-3</p>
+    </div>
+    <div class="footer-right">
+        <h3>Give Us Your Feedback</h3>
+        <p>We value your opinion. Let us know how we can improve your TriTech experience!</p>
+        <textarea placeholder="Your feedback..."></textarea>
+        <button>Submit</button>
+    </div>
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

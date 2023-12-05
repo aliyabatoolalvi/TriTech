@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <style>
+        body{
+            background-color:rgb(235, 179, 179);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <h2>GUI in java</h2>
+    <p>
+        In Java, graphical user interfaces (GUIs) are commonly developed using the Swing framework, which is part of the
+        Java Foundation Classes (JFC). Swing provides a set of components for building rich and interactive user
+        interfaces. Here's a simple example of creating a basic GUI in Java using Swing:<br><br>
+        import javax.swing.JButton;<br>
+        import javax.swing.JFrame;<br>
+        import javax.swing.JLabel;<br>
+        import javax.swing.JPanel;<br>
+
+        public class SimpleGUIExample {<br>
+        public static void main(String[] args) {<br>
+        // Create a JFrame (window)<br>
+        JFrame frame = new JFrame("Simple GUI Example");<br>
+        frame.setSize(400, 200);<br>
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br>
+
+        // Create a JPanel (container for components)<br>
+        JPanel panel = new JPanel();<br>
+
+        // Create components (e.g., buttons, labels)<br>
+        JLabel label = new JLabel("Hello, Java Swing!");<br>
+        JButton button = new JButton("Click me");<br>
+
+        // Add components to the panel<br>
+        panel.add(label);<br>
+        panel.add(button);<br>
+
+        // Add the panel to the frame<br>
+        frame.add(panel);<br>
+
+        // Set the frame to be visible<br>
+        frame.setVisible(true);<br>
+        }
+        }<br><br>
+        This example creates a simple GUI window with a label and a button. Let's break down the key components:
+    <ul>
+        <li>
+            <b></b>JFrame:</b> Represents the main window of the application.
+        </li>
+        <li><b>JPanel:</b> Serves as a container for organizing and laying out other components.</li>
+        <li> <b>JLabel:</b> Displays a text label.</li>
+        <li><b>JButton:</b> Represents a button that can trigger an action.</li>
+    </ul>
+    This is a basic example, and Swing provides a wide range of components and layout managers for creating more
+    sophisticated GUIs. Here are some common Swing components:
+
+    <ul>
+        <li><b>Containers:</b></li> JPanel, JFrame, JDialog, JScrollPane, etc.
+        <li><b>Components:</b> </li>JButton, JLabel, JTextField, JTextArea, JCheckBox, JRadioButton, JComboBox, JList,
+        JTable, etc.
+        <li><b>Layout Managers:</b></li> FlowLayout, BorderLayout, GridLayout, BoxLayout, GridBagLayout, etc.
+    </ul>
+    <p>When working with GUIs in Java, Swing provides event listeners to handle user interactions. Event-driven
+        programming is commonly used in GUI applications to respond to user actions like button clicks or menu
+        selections.</p>
+
+
+
+
+    </p>
+    <p><a href="java.html">Back to previous</a></p>
+    </header>
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#" onclick="changePage(1)">Home</a></li>
+                <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
+                <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
+                <li><a href="#" onclick="changePage(4)">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-middle">
+            <h3>Contact Us</h3>
+            <p>Email: info@tritech.com</p>
+            <p>Phone: +92 316-344-234-3</p>
+        </div>
+        <div class="footer-right">
+            <h3>Give Us Your Feedback</h3>
+            <p>We value your opinion. Let us know how we can improve your TriTech experience!</p>
+            <textarea placeholder="Your feedback..."></textarea>
+            <button>Submit</button>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>  
+    
+
+
+
+</body>
+
+</html>

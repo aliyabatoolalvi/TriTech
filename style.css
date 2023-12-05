@@ -83,6 +83,8 @@ nav{
 .cta-button {
     background-color: var(--button);
     color: #333;
+    background-color: var(--button);
+    color: #333;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -92,6 +94,11 @@ nav{
     margin: 12px;
     font-family: 'Poppins', sans-serif;
 
+    
+}
+.cta-button a{
+    text-decoration: none;
+    color: black;
     
 }
 
@@ -104,20 +111,26 @@ nav{
 
 /* Welcoming Section styles */
 .welcome-section {
-    top: 10px;
+    top: 0;
     text-align: center;
     padding: 0 50px;
+    padding-bottom: 50px;
     /* padding-top: 100px; */
     height: auto;
     /* background-image: url("images/BACKGROUND/Untitled\ design.png"); */
     filter: none;
-    margin-top:55px;
+    /* margin-top:55px; */
+    position: relative;
+    overflow: hidden;
+    /* background-color: grey; */
 }
 .welcome-section .chinty{
-    top: 41px;
-    right: -171px;
+  
     z-index: -1;
+    top: -61px;
+    right: -190px;
 }
+
 .welcome-section .two{
     z-index: -1;
     left: -147px !important;
@@ -166,6 +179,7 @@ nav{
     animation: back 50s linear infinite ;
     /* animation-timing-function: ease-out;  */
     /* animation-direction: alternate; */
+    /* position: absolute; */
 
 }
 

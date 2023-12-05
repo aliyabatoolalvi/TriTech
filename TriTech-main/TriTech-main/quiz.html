@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <style>
+        
+
+        h2{
+            text-align: center;
+            margin:0 auto;
+        }
+        body{
+            background-color:rgb(235, 179, 179);
+        color:black;
+        }
+
+        .quiz-container {
+            display: none;
+        }
+.bt1{
+width:80px;
+height: 30px;
+margin:50px;
+
+    background-color: rgb(181, 50, 50);
+}
+.bt2{
+    width:80px;
+height: 30px;
+    background-color: rgb(18, 152, 18);
+}
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+<h2>Welcome to the Java Quiz</h2>
+
+<button  class="bt1"onclick="startQuiz()">Start Quiz</button>
+
+<div id="quiz-container" class="quiz-container">
+    <div id="timer">Time remaining: 05:00</div>
+
+    <h3>Question 1:</h3>
+    <p>Which of the following is the correct syntax for declaring the main method in Java?</p>
+    <input type="radio" name="q1" value="a"> A.public void main(String[] args) <br>
+    <input type="radio" name="q1" value="b"> B.public static int main(String args) <br>
+    <input type="radio" name="q1" value="c"> C.public static void main(String[] args)
+
+    <br>
+    <h3>Question 2:</h3>
+    <p>Which data type is used for storing whole numbers in Java?</p>
+    <input type="radio" name="q1" value="a"> A.float <br>
+    <input type="radio" name="q1" value="b"> B. double<br>
+    <input type="radio" name="q1" value="c"> C.int
+    
+    <br>
+    <h3>Question 3:</h3>
+    <p>In Java, what is the purpose of the this keyword?</p>
+    <input type="radio" name="q1" value="a"> A.To create a new object <br>
+    <input type="radio" name="q1" value="b"> B. To invoke a superclass method<br>
+    <input type="radio" name="q1" value="c"> C.To refer to the current instance of the class
+    
+    <br>
+
+    
+
+    <br>
+    <button class="bt2" onclick="submitQuiz()">Submit Answers</button>
+</div>
+
+<div id="result">
+    <h2>Quiz Result</h2>
+    <p id="score">Your score: </p>
+    <p id="correct-answers">Correct answers:</p>
+</div>
+
+<script>
+    let quizContainer = document.getElementById('quiz-container');
+    let timerElement = document.getElementById('timer');
+    let resultElement = document.getElementById('result');
+    let scoreElement = document.getElementById('score');
+    let correctAnswersElement = document.getElementById('correct-answers');
+    let quizStartTime;
+    let quizDuration = 300; // 5 minutes in seconds
+    let timerInterval;
+
+    function startQuiz() {
+        // Show the quiz container
+        quizContainer.style.display = 'block';
+
+        // Set the quiz start time
+        quizStartTime = new Date().getTime();
+
+        // Update the timer every second
+        timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+        let currentTime = new Date().getTime();
+        let elapsedTime = (currentTime - quizStartTime) / 1000; // in seconds
+        let remainingTime = Math.max(quizDuration - elapsedTime, 0);
+
+        let minutes = Math.floor(remainingTime / 60);
+        let seconds = Math.floor(remainingTime % 60);
+
+        // Display the remaining time
+        timerElement.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        // If the time is up, submit the quiz automatically
+        if (remainingTime <= 0) {
+            clearInterval(timerInterval);
+            submitQuiz();
+        }
+    }
+
+    function submitQuiz() {
+        // Stop the timer
+        clearInterval(timerInterval);
+
+        // Get user answers
+        let userAnswers = [];
+        let radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+        radioButtons.forEach(button => {
+            userAnswers.push(button.value);
+        });
+
+        // Compare user answers with correct answers (dummy data for illustration)
+        let correctAnswers = ['c']; // Replace with actual correct answers
+
+        // Display quiz result
+        displayResult(userAnswers, correctAnswers);
+    }
+
+    function displayResult(userAnswers, correctAnswers) {
+        // Count correct answers
+        let correctCount = 0;
+        for (let i = 0; i < userAnswers.length; i++) {
+            if (userAnswers[i] === correctAnswers[i]) {
+                correctCount++;
+            }
+        }
+
+        // Display result
+        resultElement.style.display = 'block';
+        scoreElement.textContent = `Your score: ${correctCount} out of ${correctAnswers.length}`;
+        correctAnswersElement.textContent = `Correct answers: ${correctAnswers.join(', ')}`;
+    }
+</script>
+
+
+
+<p><a href="java.html">Back to previous </a></p>
+</header>
+</header>
+<footer class="footer">
+    <div class="footer-left">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#" onclick="changePage(1)">Home</a></li>
+            <li><a href="#" onclick="changePage(2)">Getting Started</a></li>
+            <li><a href="#" onclick="changePage(3)">Tutorials</a></li>
+            <li><a href="#" onclick="changePage(4)">About Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-middle">
+        <h3>Contact Us</h3>
+        <p>Email: info@tritech.com</p>
+        <p>Phone: +92 316-344-234-3</p>
+    </div>
+    <div class="footer-right">
+        <h3>Give Us Your Feedback</h3>
+        <p>We value your opinion. Let us know how we can improve your TriTech experience!</p>
+        <textarea placeholder="Your feedback..."></textarea>
+        <button>Submit</button>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
