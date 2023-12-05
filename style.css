@@ -7,8 +7,6 @@ body{
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-
-
 }
 :root{
     --nav: #22092C;
@@ -18,8 +16,7 @@ body{
 nav{
     position: sticky;
     top: 0;
-    width: 100%;
-    
+    width: 100%;  
 }
 .navbar {
   
@@ -296,8 +293,8 @@ nav{
     cursor: pointer;   
 }
 .image-cutout img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: cover; 
 }
 .image-cutout h1 a{
@@ -516,6 +513,8 @@ blockquote{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #BE3144;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .developer-role {
@@ -560,6 +559,36 @@ blockquote{
         height: 100px;
         }
 
+        .footer{
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+        .footer-middle{
+            position: relative;
+            left: -46px;
+        }
+        .footer-middle img{
+            position: relative;
+            left: -37px;
+        }
+        .footer-left{
+            position: relative;
+            /* left: -76px; */
+        }
+        .footer-left ul, li{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            margin-right: 12px;
+        }
+        .footer-left ul, li{
+        margin-right: 12px;
+        }
+   }
 
+   .banner{
+    color: var(--nav);
 
    }
